@@ -1,12 +1,6 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
-import Link from "next/link";
-import Pesquisa from "../components/search";
-import CustomFilter from "../components/filters";
 
+import Search from "../components/search";
 export default function Dashboard() {
 
   return (
@@ -20,13 +14,15 @@ export default function Dashboard() {
           </div>
 
           <div className=" mt-4">
-            <Pesquisa/>
+            <Search/>
 
             {/* <div>
               <CustomFilter title='Ano'/>
               <CustomFilter title='Combustível'/>
               <CustomFilter title='Modelo'/>
             </div> */}
+
+            
           </div>
         
       </div>

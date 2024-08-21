@@ -4,7 +4,7 @@ import { useState } from "react"
 import { SearchManufacturer } from "./searchManufacturer"
 
 
-export default function Pesquisa() {
+export default function Search() {
 
     const [manufacturer, setManufacturer] = useState('')
 
@@ -15,8 +15,10 @@ export default function Pesquisa() {
     return (
         <form action="" onSubmit={handleSearch}>
             <div>
-                <SearchManufacturer manufacturer={manufacturer}
-                setManufacturer={setManufacturer} />                
+                <SearchManufacturer 
+                manufacturer={manufacturer}
+                setManufacturer={setManufacturer} /> 
+                               
             </div>
         </form>
     )
