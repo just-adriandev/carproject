@@ -1,5 +1,6 @@
 
 
+import CarsCatalogo from "../components/catalogo";
 import Search from "../components/search";
 export default function Dashboard() {
 
@@ -21,6 +22,8 @@ export default function Dashboard() {
               <CustomFilter title='Combustível'/>
               <CustomFilter title='Modelo'/>
             </div> */}
+
+            <CarsCatalogo/>
 
             
           </div>
