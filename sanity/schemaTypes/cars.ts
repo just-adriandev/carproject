@@ -28,12 +28,12 @@ export const projectsType = defineType({
         }),
         defineField({
             name: "cambio",
-            title: "cambio",
+            title: "cambio | por favor utilize abreviações para manter padronizado. 'MANU.', 'AUTO.",
             type: "string",
         }),
         defineField({
             name: "combustivel",
-            title: "combustivel",
+            title: "combustivel | por favor utilize abreviações para manter padronizado. 'ELET.', 'GAS.', 'ALC.', 'ETA.'",
             type: "string",
         }),
         defineField({

@@ -60,3 +60,10 @@
     --chart-5: 340 75% 55%;
   }
 }
+
+.carousel-imagem {
+  width: 25%; /* ajuste a largura para o valor desejado */
+  height: 200px; /* ajuste a altura para o valor desejado */
+  margin: 10px;
+  display: inline-block;
+}
