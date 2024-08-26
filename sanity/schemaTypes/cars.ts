@@ -48,10 +48,9 @@ export const projectsType = defineType({
             of: [{type:'string'}]
         }),
         defineField({
-            name: "contato",
-            title: "contato",
+            name: "informacoes",
+            title: "informacoes",
             type: "string",
         }),
-
     ]
 })

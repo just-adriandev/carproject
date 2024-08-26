@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs/components";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -22,12 +23,16 @@ export default function Hero() {
                     Registre-se de graça 
                     </Button>
                     </RegisterLink>
+
+                    <Button size='lg' className=' ml-3 w-full'>
+                    <Link href='/dashboard'>Continuar sem login</Link> 
+                    </Button>
                 </div>
                             
             </div>
            
                   <div className="flex justify-center items-center relative">
-                    <div className=" absolute top-0 left-0 w-full h-full z-0">
+                    <div className="flex items-center absolute top-0 left-0 w-full h-full z-0">
                     <Image src="/hero-bg.png" alt="Hero background" width={600} height={500} />
                     </div>
 
