@@ -20,6 +20,7 @@ import {
 } from "@/components/ui/popover"
 
 import { manufacturers } from "@/constants/constants"
+import { SearchBtn } from "./button"
 
 interface iAppProps {
     manufacturer:string;
@@ -60,7 +61,7 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
   return (
     
     <div className="md:flex">
-        <div className="mb-3 md:mr-3">
+        <div className="mb-3 flex md:mr-3">
         <Popover open={openf1} onOpenChange={setOpenf1}>
 
           <PopoverTrigger asChild>
@@ -74,7 +75,9 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
               ? manufacturers.find((manufacturers) => manufacturers.value === valuef1)?.label
               : <span className="flex items-center text-center"> <Factory className=" mr-2 text-muted-foreground"/> Selecione a montadora.</span> }
               <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-          </Button>
+
+          </Button> 
+
           </PopoverTrigger>
 
           <PopoverContent className="w-[200px] p-0">
@@ -107,9 +110,12 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
           </PopoverContent>
 
         </Popover>
+
+        <SearchBtn/>
+
         </div>
         
-        <div className="">
+        <div className="flex">
         <Popover open={openf2} onOpenChange={setOpenf2}>
 
           <PopoverTrigger asChild>
@@ -123,8 +129,11 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
                   ? frameworks2.find((framework2) => framework2.value === valuef2)?.label
                   : <span className="flex items-center text-center"> <Car className=" mr-2 text-muted-foreground"/> Selecione o modelo.</span>}
                   <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-              </Button>
+                  
+              </Button> 
           </PopoverTrigger>
+
+          
 
           <PopoverContent className="w-[200px] p-0">
               <Command>
@@ -156,6 +165,9 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
           </PopoverContent>
 
         </Popover>
+
+        <SearchBtn/>
+        
         </div>
 
     </div>

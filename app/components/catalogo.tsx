@@ -25,6 +25,7 @@ async function getData() {
 
     return data;
 }
+
 export default async function CarsCatalogo() {
 
     const data: CarsCard[] = await getData();
@@ -34,7 +35,7 @@ export default async function CarsCatalogo() {
   {data.map((item: { _id: Key | null | undefined; montadora: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; modelo: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; ano: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; imagemUrl: string[]; cambio: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; combustivel: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; kilometragem: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; tags: string[]; contato: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; }) => (
     <div key={item._id}>
       <div>
-        <Card className="mt-4 bg-opacity-70 mb-10">
+        <Card className="mt-4 bg-opacity-50 bg-black mb-10">
 
           <div>
           <CardHeader>
@@ -76,15 +77,15 @@ export default async function CarsCatalogo() {
 
                 <div className="md:flex items-center md:m-2 justify-between md:w-[60%] ">
 
-                <div className="flex m-8 flex-col items-center">
+                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
                   <CircuitBoard className="h-7  w-7 mb-2" />
                   <h1 className="text-3xl">{item.cambio}</h1>
                 </div>
-                <div className="flex m-8 flex-col items-center">
+                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
                   <Fuel className="h-7 w-7  mb-2" />
                   <h1 className="text-3xl">{item.combustivel}</h1>
                 </div>
-                <div className="flex m-8 flex-col items-center">
+                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
                   <ArrowLeftRight className="h-7  w-7 mb-2" />
                   <h1 className="text-3xl">{item.kilometragem}</h1>
                 </div>
@@ -92,7 +93,7 @@ export default async function CarsCatalogo() {
                 </div>
 
                 <div className="md:w-[40%] w-[100%] md:justify-end flex items-center">
-                  <InfosModal item={item} />
+                  <InfosModal item={(item as CarsCard)} />
 
                 </div>
 
@@ -101,7 +102,7 @@ export default async function CarsCatalogo() {
               <div className="flex w-full">
               <ul className="flex">
                 {item.tags && item.tags.map((tag) => (
-                  <li className="flex text-white bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
+                  <li className="flex text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
                 ))}
               </ul>
               </div>

@@ -9,8 +9,8 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
 import { CarsCard } from "@/lib/interface";
+import SlideButton from "./button";
 
 interface InfosModalProps {
   item: CarsCard | null | undefined;
@@ -24,26 +24,24 @@ export function InfosModal({ item }: InfosModalProps) {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button className="m-5 w-full md:w-[70%] h-16 rounded-md text-3xl">
-          Mais Informações.
-        </Button>
+        <SlideButton/>
       </AlertDialogTrigger>
 
       <AlertDialogContent>
         <AlertDialogHeader>
           <AlertDialogTitle>Informações gerais</AlertDialogTitle>
-          <AlertDialogDescription>
-            Entre em contato pelo nosso whatsapp para saber mais sobre o caroo e agende uma visita, basta clicar no botão abaixo que você sera encaminhado.
+          <AlertDialogDescription className=" font-medium">
+            Entre em contato pelo nosso whatsapp para saber mais sobre o veículo e agende uma visita, basta clicar no botão abaixo que você será encaminhado para uma conversa com um de nossos funcionários.
           </AlertDialogDescription>
         </AlertDialogHeader>
 
-        <div>
-          <h1>{item.montadora} {item.modelo}</h1>
-          <h2>Ano: {item.ano}</h2>
-          <h2>Câmbio: {item.cambio}</h2>
-          <h2>Combustível: {item.combustivel}</h2>
-          <h2>Kilometragem: {item.kilometragem}</h2>
-          <h2>Contato: {item.contato}</h2>
+        <div className=" mt-4 ">
+          <h1 className=" text-2xl mb-5">{item.montadora} <span>{item.modelo}</span></h1>
+          <h2 className=" text-2xl mb-3">Ano: <span className=" text-2xl font-semibold">{item.ano}</span></h2>
+          <h2 className=" text-2xl mb-3">Câmbio: <span className=" text-2xl font-semibold">{item.cambio}</span></h2>
+          <h2 className=" text-2xl mb-3">Combustível: <span className=" text-2xl font-semibold">{item.combustivel}</span></h2>
+          <h2 className=" text-2xl mb-3">Kilometragem: <span className=" text-2xl font-semibold">{item.kilometragem}</span></h2>
+          <h2 className=" text-2xl mb-3">Contato: <span className=" text-2xl font-semibold">{item.contato}</span></h2>
         </div>
 
         <AlertDialogFooter>
