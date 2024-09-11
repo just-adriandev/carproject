@@ -17,7 +17,9 @@ const user = await getUser()
                 <Link href={'/'}> <h1 className="font-bold text-4xl"> AUTO<span className="text-primary">adrian</span></h1> </Link>
 
                 <div className="flex items-center gap-x-5">
-                    <ThemeToggle/>
+                    <div className="hidden md:flex">
+                        <ThemeToggle/>
+                    </div>
                     
                     {await isAuthenticated() ? (
                         <div className="flex items-center gap-x-5">                        
@@ -28,7 +30,7 @@ const user = await getUser()
                     ) : (
                         <div className="flex items-center gap-x-5">                        
                     
-                        <LoginLink><Button>Entrar</Button></LoginLink>
+                        <LoginLink><Button className="text-white">Entrar</Button></LoginLink>
                         <RegisterLink><Button variant={"secondary"}>Registre-se</Button></RegisterLink>
 
                         

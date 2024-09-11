@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Car, Check, ChevronsUpDown, Factory } from "lucide-react"
-
+import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
@@ -58,6 +58,12 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
   const [openf2, setOpenf2] = React.useState(false)
   const [valuef2, setValuef2] = React.useState("")
 
+  const handleSelect = (value: string) => {
+    setValuef1(value)
+    setManufacturer(value) // atualiza o estado manufacturer com o valor selecionado
+    setOpenf1(false)
+  }
+
   return (
     
     <div className="md:flex">
@@ -91,9 +97,8 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
                       key={manufacturers.value}
                       value={manufacturers.value}
                       onSelect={(currentValue) => {
-                      setValuef1(currentValue === valuef1 ? "" : currentValue)
-                      setOpenf1(false)
-                      }}
+                        handleSelect(currentValue)}
+                      }
                   >
                       <Check
                       className={cn(

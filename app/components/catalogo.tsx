@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
 import { InfosModal } from "./infosModal";
 
+
 async function getData() {
     const query = `*[_type == 'cars'] {
     montadora,
@@ -31,15 +32,15 @@ export default async function CarsCatalogo() {
     const data: CarsCard[] = await getData();
 
     return (
-        <div>
+        <div className="lg:grid lg:grid-cols-12">
   {data.map((item: { _id: Key | null | undefined; montadora: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; modelo: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; ano: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; imagemUrl: string[]; cambio: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; combustivel: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; kilometragem: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; tags: string[]; contato: string | number | bigint | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | Iterable<ReactNode> | null | undefined; }) => (
-    <div key={item._id}>
+    <div className="md:col-span-6 m-2" key={item._id}>
       <div>
-        <Card className="mt-4 bg-opacity-50 bg-black mb-10">
+        <Card className="bg-secondary mt-4 mb-10">
 
           <div>
           <CardHeader>
-            <div className="flex md:mx-6 justify-between">
+            <div className="flex lg:mx-6 justify-between">
             <h1 className="text-2xl md:text-3xl">{item.montadora}<span className="ml-2 font-bold text-3xl md:text-5xl">{item.modelo}</span></h1>
             <h1 className="text-3xl md:text-4xl"><span className="hidden sm:flex mr-2 align-top text-sm">Ano</span>{item.ano}</h1>
             </div>            
@@ -75,34 +76,33 @@ export default async function CarsCatalogo() {
               
               <div className="md:flex">
 
-                <div className="md:flex items-center md:m-2 justify-between md:w-[60%] ">
+                <div className="grid grid-cols-2 md:flex w-full items-center md:m-2 justify-between ">
 
-                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
+                <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
                   <CircuitBoard className="h-7  w-7 mb-2" />
                   <h1 className="text-3xl">{item.cambio}</h1>
                 </div>
-                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
+                <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
                   <Fuel className="h-7 w-7  mb-2" />
                   <h1 className="text-3xl">{item.combustivel}</h1>
                 </div>
-                <div className=" cursor-pointer hover:text-primary flex m-8 flex-col items-center">
+                <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
                   <ArrowLeftRight className="h-7  w-7 mb-2" />
                   <h1 className="text-3xl">{item.kilometragem}</h1>
                 </div>
                 
                 </div>
 
-                <div className="md:w-[40%] w-[100%] md:justify-end flex items-center">
+              </div>
+
+              <div className="mb-7 w-full mt-3">
                   <InfosModal item={(item as CarsCard)} />
-
-                </div>
-
               </div>
 
               <div className="flex w-full">
               <ul className="flex">
                 {item.tags && item.tags.map((tag) => (
-                  <li className="flex text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
+                  <li className="transition duration-500 ease-in-out flex text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
                 ))}
               </ul>
               </div>

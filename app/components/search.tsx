@@ -2,9 +2,6 @@
 
 import { useState } from "react"
 import { SearchManufacturer } from "./searchManufacturer"
-import { SearchBtn } from "./button"
-import { setDefaultResultOrder } from "dns"
-
 
 export default function Search() {
 

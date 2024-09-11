@@ -3,8 +3,8 @@ import { Search } from "lucide-react";
 
 export default function SlideButton() {
   return (
-    <div className="flex md:h-[85px] md:mr-10 items-center mx-auto">
-        <a className=" h-full bt more-bt">
+    <div className="flex md:h-[85px]">
+        <a className="mx-auto flex h-full bt more-bt">
         <span className="fl">
         </span> 
             <span className="sfl">
@@ -14,7 +14,7 @@ export default function SlideButton() {
                 <i>
                 </i>
 
-        <p className="text-2xl flex mx-auto md:mt-2">Mais informações</p>
+        <p className="text-2xl md:mt-2">Mais informações</p>
     
     </a>
     </div>
@@ -24,8 +24,8 @@ export default function SlideButton() {
 export function SearchBtn() {
   return (
     <div>
-      <Button className=" bg-secondary ml-1 flex justify-end " type="submit">
-        <Search className="h-6 w-6 text-white" />
+      <Button variant={"secondary"} className="ml-1 flex justify-end " type="submit">
+        <Search className="h-6 w-6" />
       </Button>
     </div>
   );
