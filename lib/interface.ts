@@ -9,4 +9,5 @@ tags: string[];
 contato: string;
 imagemUrl: string[];
 _id: string;
+informacoes: string;
 }

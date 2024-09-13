@@ -12,10 +12,11 @@ async function getData() {
     combustivel,
     kilometragem,
     tags,
-    contato
+    contato,
+    informacoes,
   }`
 
-  const data: CarsCard[] = await client.fetch(query, { limit: 200 })
+  const data: CarsCard[] = await client.fetch(query, { limit: 2000000 })
 
   return data;
 }
@@ -23,7 +24,7 @@ async function getData() {
 export default async function AllInfosGet() {
   const data: CarsCard[] = await getData();
 
-  if (!Array.isArray(data) || !data.every((item) => 'montadora' in item && '_id' in item && 'modelo' in item && 'ano' in item && 'cambio' in item && 'combustivel' in item && 'kilometragem' in item && 'tags' in item && 'contato' in item)) {
+  if (!Array.isArray(data) || !data.every((item) => 'montadora' in item && '_id' in item && 'modelo' in item && 'ano' in item && 'cambio' in item && 'combustivel' in item && 'kilometragem' in item && 'tags' in item && 'contato' in item && 'informacoes' in item )) {
     throw new Error('Invalid data format');
   }
 
@@ -32,10 +33,11 @@ export default async function AllInfosGet() {
       {data.map((item: CarsCard) => (
         <div key={item._id}>
           <h1 className="">{item.montadora}<span className="">{item.modelo}</span></h1>
-          <h1 className=""><span className="">Ano</span>{item.ano}</h1>                  
+          <h1 className=""><span className=""></span>{item.ano}</h1>                  
           <h1 className="">{item.cambio}</h1>
           <h1 className="">{item.combustivel}</h1>
           <h1 className="">{item.kilometragem}</h1>
+          <span className="">{item.informacoes}</span>
         </div>
       ))}
     </div>

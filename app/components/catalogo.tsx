@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import { CarsCard } from "@/lib/interface";
@@ -20,9 +19,10 @@ async function getData() {
     kilometragem,
     tags,
     contato,
+    informacoes,
     "imagemUrl": imagem[].asset->url} `
 
-    const data = await client.fetch(query, { limit: 200 })
+    const data = await client.fetch(query, { limit: 2000000000 })
 
     return data;
 }
@@ -100,9 +100,9 @@ export default async function CarsCatalogo() {
               </div>
 
               <div className="flex w-full">
-              <ul className="flex">
+              <ul className="flex flex-wrap">
                 {item.tags && item.tags.map((tag) => (
-                  <li className="transition duration-500 ease-in-out flex text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
+                  <li className="transition duration-500 ease-in-out text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
                 ))}
               </ul>
               </div>

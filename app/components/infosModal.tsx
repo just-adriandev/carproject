@@ -29,24 +29,23 @@ export function InfosModal({ item }: InfosModalProps) {
 
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Informações gerais</AlertDialogTitle>
-          <AlertDialogDescription className=" font-medium">
+          <AlertDialogTitle><h1 className="text-2xl">Informações gerais</h1></AlertDialogTitle>
+          <AlertDialogDescription className="text-xl">
             Entre em contato pelo nosso whatsapp para saber mais sobre o veículo e agende uma visita, basta clicar no botão abaixo que você será encaminhado para uma conversa com um de nossos funcionários.
           </AlertDialogDescription>
         </AlertDialogHeader>
 
-        <div className=" mt-4 ">
-          <h1 className=" text-2xl mb-5">{item.montadora} <span>{item.modelo}</span></h1>
-          <h2 className=" text-2xl mb-3">Ano: <span className=" text-2xl font-semibold">{item.ano}</span></h2>
-          <h2 className=" text-2xl mb-3">Câmbio: <span className=" text-2xl font-semibold">{item.cambio}</span></h2>
-          <h2 className=" text-2xl mb-3">Combustível: <span className=" text-2xl font-semibold">{item.combustivel}</span></h2>
-          <h2 className=" text-2xl mb-3">Kilometragem: <span className=" text-2xl font-semibold">{item.kilometragem}</span></h2>
-          <h2 className=" text-2xl mb-3">Contato: <span className=" text-2xl font-semibold">{item.contato}</span></h2>
+        <div className="mt-4">
+          
+          <h2 className="text-xl mb-3">Contato: <span className="text-2xl">{item.contato}</span></h2>
+          <h2 className="text-xl mb-3">informações: <span>{item.informacoes}</span> </h2>
         </div>
 
         <AlertDialogFooter>
-          <AlertDialogCancel>Fechar</AlertDialogCancel>
-          <AlertDialogAction className="hover:bg-green-500">Whatsapp</AlertDialogAction>
+          <div className='m-1'>
+            <AlertDialogCancel className='mb-2 sm:mb-0 mr-3'>Fechar</AlertDialogCancel>
+            <AlertDialogAction className="hover:bg-green-500">Whatsapp</AlertDialogAction>
+          </div>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
