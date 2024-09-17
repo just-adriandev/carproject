@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { SearchManufacturer } from "./searchManufacturer"
+import { SearchBtn } from "./button"
 
 export default function Search() {
 
@@ -13,12 +14,12 @@ export default function Search() {
     }
 
     return (
-        <form action="" onSubmit={handleSearch}>
+        <form onSubmit={handleSearch}>
             <div>
                 <SearchManufacturer 
                 manufacturer={manufacturer}
                 setManufacturer={setManufacturer} /> 
-                              
+                <SearchBtn/>     
             </div>
         </form>
     )

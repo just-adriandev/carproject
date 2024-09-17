@@ -90,9 +90,6 @@ export function SearchManufacturer({manufacturer, setManufacturer}: iAppProps) {
           </PopoverContent>
 
         </Popover>
-
-        <SearchBtn/>
-
         </div>
 
     </div>
