@@ -35,18 +35,27 @@ export function InfosModal({ item }: InfosModalProps) {
           </AlertDialogDescription>
         </AlertDialogHeader>
 
-        <div className="mt-4">          
-          <h1 className="mb-3 text-2xl">Sobre o carro 
-          <AlertDialogDescription className="text-xl">
-            {item.informacoes}
-          </AlertDialogDescription>
-          </h1>
+        <div className="mt-4">
 
-          <h1 className="mb-3 text-2xl">Contato 
-          <AlertDialogDescription className="text-xl">
-            {item.contato}
-          </AlertDialogDescription>
-          </h1>
+          {item.informacoes != null &&
+          (
+            <h1 className="text-2xl">Sobre o carro 
+              <AlertDialogDescription className="mb-6 mt-1 text-xl">
+                {item.informacoes}
+              </AlertDialogDescription>
+            </h1>
+          )}
+
+          {item.contato != null && 
+          (
+            <h1 className="text-2xl">Entre em contato 
+              <AlertDialogDescription className="mt-1 text-xl">
+                {item.contato}
+              </AlertDialogDescription>
+            </h1>
+          )}
+          
+
         </div>
 
         <AlertDialogFooter>

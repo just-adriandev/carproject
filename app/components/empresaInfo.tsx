@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function EmpresaInfo() {
     return (
 
-    <section className='border md:mt-5 md:mb-10 flex items-center justify-center'> 
+    <section className='md:mt-5 md:mb-10 flex items-center justify-center'> 
         <div className='relative items-center w-full px-5 py-12 mx-auto'>      
             <div className='mx-auto justify-center text-center grid md:grid-cols-2 gap-4'>
       
