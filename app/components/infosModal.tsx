@@ -50,7 +50,7 @@ export function InfosModal({ item }: InfosModalProps) {
           (
             <h1 className="text-2xl">Entre em contato 
               <AlertDialogDescription className="mt-1 text-xl">
-                {item.contato}
+                +55 {item.contato}
               </AlertDialogDescription>
             </h1>
           )}

@@ -64,7 +64,7 @@ export default function Contatos() {
             </h1>
 
             <div className="flex justify-center items-center relative">
-                <Image src="/contatosimg.png" alt="imagens dos funcionarios" width={500} height={500} className=" rounded-full z-10" />
+                <Image src="/contatosimg.png" alt="imagens dos funcionarios" width={500} height={500} className=" rounded-lg z-10" />
             </div>
          
         </div>

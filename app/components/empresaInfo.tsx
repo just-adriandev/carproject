@@ -5,7 +5,7 @@ export default function EmpresaInfo() {
 
     <section className='md:mt-5 md:mb-10 flex items-center justify-center'> 
         <div className='relative items-center w-full px-5 py-12 mx-auto'>      
-            <div className='mx-auto justify-center text-center grid md:grid-cols-2 gap-4'>
+                <div className='mx-auto justify-center text-center grid md:grid-cols-2 gap-4'>
       
         {/* lado esquerdo */} 
 
@@ -16,7 +16,7 @@ export default function EmpresaInfo() {
                 </h1>
 
                 <div className="flex justify-center items-center relative">
-                    <Image src="/funcionarios.png" alt="imagens dos funcionarios" width={500} height={500} className=" rounded-full z-10" />
+                    <Image src="/funcionarios.png" alt="imagens dos funcionarios" width={500} height={500} className=" rounded-lg z-10" />
                 </div>
                          
             </div>
