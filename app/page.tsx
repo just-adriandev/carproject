@@ -1,20 +1,19 @@
 
-import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
-import { redirect } from "next/navigation";
+import Contatos from "./components/contatos";
+import EmpresaInfo from "./components/empresaInfo";
 import Hero from "./components/hero";
+import Copyright from "./components/copyright";
 
 export default async function Home() {
-
-  const {isAuthenticated} =  getKindeServerSession();
-
-  if (await  isAuthenticated()) {
-    return redirect('/dashboard')
-  }
 
   return (
 
   <main>
     <Hero/>
+    <EmpresaInfo/>
+    <Contatos/>
+    <Copyright/>
+
   </main>
 
   );

@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Hero() {
     return (
 
-        <section className='flex items-center justify-center'> 
+        <section className='flex border items-center justify-center'> 
     <div className='relative items-center w-full px-5 py-12 mx-auto'> 
         
             <div className='mx-auto justify-center text-center grid md:grid-cols-2 gap-4'>
