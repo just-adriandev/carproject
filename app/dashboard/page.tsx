@@ -19,12 +19,6 @@ export default function Dashboard() {
             <div className=" mb-6">
             <Search/>
             </div>
-            
-            {/* <div>
-              <CustomFilter title='Ano'/>
-              <CustomFilter title='Combustível'/>
-              <CustomFilter title='Modelo'/>
-            </div> */}
 
             <CarsCatalogo/>
             
