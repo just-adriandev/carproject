@@ -1,7 +1,7 @@
 
 
 import CarsCatalogo from "../components/catalogo";
-import Search from "../components/search";
+// import Search from "../components/search";
 export default function Dashboard() {
 
   return (
@@ -17,7 +17,7 @@ export default function Dashboard() {
           <div className="mt-4">
 
             <div className=" mb-6">
-            <Search/>
+            {/* <Search/> */}
             </div>
 
             <CarsCatalogo/>
