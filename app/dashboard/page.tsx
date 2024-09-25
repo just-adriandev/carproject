@@ -15,7 +15,7 @@ export default function Dashboard() {
 
           <div className="mt-4">
 
-            <div className=" mb-6">
+            <div className=" mb-6"> 
             </div>
 
             <CarsCatalogo/>
