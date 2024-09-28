@@ -38,6 +38,7 @@ export default async function AllInfosGet() {
           <h1 className="">{item.combustivel}</h1>
           <h1 className="">{item.kilometragem}</h1>
           <span className="">{item.informacoes}</span>
+          <span>{item.contato}</span>
         </div>
       ))}
     </div>
