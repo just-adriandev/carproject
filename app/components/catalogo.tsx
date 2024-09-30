@@ -22,7 +22,7 @@ async function getData() {
     informacoes,
     "imagemUrl": imagem[].asset->url} `
 
-    const data = await client.fetch(query, { limit: 2000000000 })
+    const data = await client.fetch(query)
 
     return data;
 }

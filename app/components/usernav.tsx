@@ -14,8 +14,8 @@ import { ThemeToggle } from "./theme-toggler";
 
 const navItems = [
     {name:'Carros', href:'/dashboard', icon:Car },
-    {name:'Sobre nós', href:'/dashboard/about', icon:Info },
-    {name:'Contatos', href:'/dashboard/info', icon:Phone },   
+    {name:'Sobre nós', href:'http://localhost:3000/#aboutsUs', icon:Info },
+    {name:'Contatos', href:'http://localhost:3000/#contacts', icon:Phone },   
     ]
 
 export function UserNav({image}: {image: string}){
