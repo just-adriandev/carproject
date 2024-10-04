@@ -1,12 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { CarsCard } from "@/lib/interface";
-import { client } from "@/lib/sanity";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import { ArrowLeftRight, CircuitBoard, Fuel } from "lucide-react";
 import Image from "next/image";
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
 import { InfosModal } from "./infosModal";
 import fetchCars from './sanity';
 interface CarsListProps {
