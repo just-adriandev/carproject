@@ -18,7 +18,7 @@ interface InfosModalProps {
 
 export function InfosModal({ item }: InfosModalProps) {
   if (!item) {
-    return <div>Item not found</div>;
+    return <div>Item não encontrado, tente novamente!</div>;
   }
 
   return (

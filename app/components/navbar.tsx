@@ -11,10 +11,10 @@ const {isAuthenticated, getUser} = getKindeServerSession();
 const user = await getUser()
 
     return(
-        <nav className="border-b w-full h-[15vh] flex items-center">
+        <nav className="w-full h-[15vh] flex items-center">
             <div className="container flex items-center justify-between">
 
-                <Link href={'/'}> <h1 className="font-bold text-4xl"> AUTO<span className="text-primary">adrian</span></h1> </Link>
+                <Link href={'/'}> <h1 className="font-bold text-4xl"> AUTO<span className="text-primary">top</span></h1> </Link>
 
                 <div className="flex items-center gap-x-5">
                     <div className="hidden md:flex">

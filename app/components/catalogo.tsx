@@ -79,15 +79,15 @@ export default async function CarsCatalogo() {
                 <div className="grid grid-cols-2 md:flex w-full items-center md:m-2 justify-between ">
 
                 <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
-                  <CircuitBoard className="h-7  w-7 mb-2" />
+                  <CircuitBoard className="h-6  w-6 mb-2" />
                   <h1 className="text-3xl">{item.cambio}</h1>
                 </div>
                 <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
-                  <Fuel className="h-7 w-7  mb-2" />
+                  <Fuel className="h-6 w-6  mb-2" />
                   <h1 className="text-3xl">{item.combustivel}</h1>
                 </div>
                 <div className="cols-span-2 cursor-pointer hover:text-primary transition duration-500 ease-in-out flex m-8 flex-col items-center">
-                  <ArrowLeftRight className="h-7  w-7 mb-2" />
+                  <ArrowLeftRight className="h-6  w-6 mb-2" />
                   <h1 className="text-3xl">{item.kilometragem}</h1>
                 </div>
                 
@@ -102,7 +102,7 @@ export default async function CarsCatalogo() {
               <div className="flex w-full">
               <ul className="flex flex-wrap">
                 {item.tags && item.tags.map((tag) => (
-                  <li className="transition duration-500 ease-in-out text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-3 p-4" key={tag}>{tag}</li>
+                  <li className="transition text-xs duration-500 ease-in-out text-white cursor-pointer hover:bg-primary bg-slate-500 rounded-full m-1 p-3" key={tag}>{tag}</li>
                 ))}
               </ul>
               </div>
